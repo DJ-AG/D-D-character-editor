@@ -8,6 +8,7 @@ import connectDB from "./db/connect";
 
 //Routers
 import authRoutes from './Routes/authRoutes'
+import characterRoutes from './Routes/characterRoutes'
 
 //Middleware
 import NotFoundMiddleware from "./middleware/not-found";
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/auth", authRoutes)
+app.use("/api/v1/auth", characterRoutes)
 
 app.use(NotFoundMiddleware);
 app.use(errorHandlerMiddleware);
